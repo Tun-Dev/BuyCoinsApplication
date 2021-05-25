@@ -5,7 +5,7 @@ function getUserName(){
         window.alert('Enter a Github Username')
     } 
 
-    const TOKEN = "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"
+    const TOKEN = "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"
 
     fetch("https://api.github.com/graphql",{
         method: "POST",
@@ -16,9 +16,6 @@ function getUserName(){
                 id
                 name
                 bio
-                repositories{
-                    totalCount
-                }
             }
         }`
         }),
@@ -28,7 +25,8 @@ function getUserName(){
         }
     })
         .then(res => res.json())
-        .then((data) => {
+        .then(data => {
+            let user = data.data.user
             if (data.data.user == null ){
                 window.alert('User does not exist')
             } else{
