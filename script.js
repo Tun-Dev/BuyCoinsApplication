@@ -5,7 +5,7 @@ function getUserName(){
         window.alert('Enter a Github Username')
     } 
 
-    const TOKEN = "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"
+    const TOKEN = " "
 
     fetch("https://api.github.com/graphql",{
         method: "POST",
