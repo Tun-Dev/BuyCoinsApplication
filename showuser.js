@@ -8,11 +8,7 @@ navbarLinks.classList.toggle('active')
 // Fetching User profile
 var userNameLogin = localStorage.getItem("userCall")
 
-<<<<<<< HEAD
 const TOKEN = process.env.API_KEY
-=======
-const TOKEN = " "
->>>>>>> a088cf861d234b059a6952168a41b18183969bc3
 
 
 
