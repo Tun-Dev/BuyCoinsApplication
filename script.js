@@ -1,10 +1,11 @@
+
 function getUserName(){
     var userNameLogin = document.getElementById('userName').value;
     localStorage.setItem("userCall", userNameLogin);
     if(userNameLogin === ""){
         window.alert('Enter a Github Username')
     } 
-
+    require("dotenv").config();
     const TOKEN = process.env.API_KEY
 
     fetch("https://api.github.com/graphql",{
