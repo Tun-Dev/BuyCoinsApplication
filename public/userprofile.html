@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userprofilestyle.css">
+    <title>Github</title>
+</head>
+<body>
+    <!-- NAVBAR FOR DESKTOP -->
+    <div class="nav1">
+        <div class="leftnav1">
+            <a href=""><img src="images/github.png" alt=""></a>
+            <input type="text" placeholder="Search or Jump to...">
+            <a href="">Pull request</a>
+            <a href="">Issues</a>
+            <a href="">Codespaces</a>
+            <a href="">Marketplace</a>
+            <a href="">Explore</a>
+        </div>
+        <div class="rightnav1">
+            <img src="images/bell.png" alt="">
+            <select name="+" id=""><option value="+">+</option></select>
+            <div class="innerright">
+                <div id="navimg">
+
+                </div>
+                <select name="+" id=""><option value="+"></option></select>
+            </div>
+        </div>
+    </div>
+    <!-- NAVBAR FOR MOBILE -->
+    <div class="nav2">
+        <div class="nav2top">
+            <a href="#" class="toggle-button" id="togglebutton">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <a href=""><img src="images/github.png" alt="" class="githubmobile" ></a>
+            <a href=""><img src="images/bell.png" alt="" class="mobilebell"></a>
+        </div>
+        <div class="nav2bottom">
+            <div class="toggle-links" id="togglelinks">
+                <ul>
+                    <input type="text" placeholder="Search or Jump to...">
+                    <li><a href="">Pull request</a></li>
+                    <li><a href="">Issues</a></li>
+                    <li><a href="">Codespaces</a></li>
+                    <li><a href="">Marketplace</a></li>
+                    <li><a href="">Explore</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="maincontainer">
+        <div class="maintop">
+            <div class="conleft-top">
+                <div class="conleft-topinner">
+                    <div id="avatar1">
+
+                    </div>
+                    <div class="intro" id="intro">
+
+                    </div>
+                </div>
+            </div>
+            <div class="conright-top">
+                <button> <img src="images/book.png" alt=""> Overview</button>
+                <button id="highlight"> <img src="images/book-closed-with-a-bookmark.png" alt=""> Repositories <span id="totalRepoCount" ></span> </button>
+                <button> <img src="images/project.png" alt=""> Projects</button>
+                <button> <img src="images/cube.png" alt=""> Packages</button>
+            </div>
+        </div>
+        <div class="mainbottom">
+            <div class="mainconright">
+                <div class="mainconright-top">
+                    <input class="findarep" type="text" placeholder="Find a repository...">
+                </div>
+                <div class="results" id="results">
+
+                </div>
+                <div id="allRepos">
+
+                </div>
+                <div id="userchecking">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="showuser.js"></script>
+</body>
+</html>
