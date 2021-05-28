@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Nav1 CSS  */
+
+.nav1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    background: #25292e;
+    align-items: center;
+}
+
+
+.leftnav1{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.leftnav1 a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.leftnav1 img{
+    width: 50px;
+}
+
+input{
+    background: none;
+    width: 200px;
+    height: 27px;
+    outline: none;
+    border: 1px solid #c8c9ca;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #c8c9ca;
+    margin-right: 10px;
+}
+
+.rightnav1{
+    height: 50px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rightnav1 img{
+    width: 14px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.innerright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.innerright img{
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.innerright select{
+    margin-left: 0;
+    width: 17px;
+}
+
+select{
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: white;
+    background: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* NAV2 CSS */
+
+.nav2{
+    background-color: #25292e;
+    display: none;
+    flex-direction: column;
+}
+
+.nav2top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px ;
+}
+
+.githubmobile{
+    width: 50px;
+}
+
+.mobilebell{
+    width: 15px;
+}
+
+.toggle-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background: white;
+}
+
+.toggle-links{
+    display: flex;
+    flex-direction: column;
+    background: #25292e;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.toggle-links li{
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.toggle-links ul input{
+    margin-left: 20px;
+    width: 85%;
+}
+
+.toggle-links a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Maincontainer CSS */
+
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Maintop CSS and children divs CSS */
+
+.maintop{
+    border-bottom: 1px solid #c8c9ca;
+}
+
+/* Conleft-top CSS */
+
+.conleft-top{
+    top: 110px;
+    text-align: center;
+    width: 30%;
+    position: absolute;
+}
+
+.conleft-topinner{
+    width: 250px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.innerimg1{
+    position: relative;
+    width: 250px;
+    border-radius: 50%;
+}
+
+/* Con-righttop CSS */
+
+.conright-top{
+    margin-left: 30%;
+    display: flex;
+}
+
+.conright-top button{
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 33px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 500;
+    align-items: center;
+}
+
+button img{
+    width: 16px;
+}
+
+
+
+#highlight{
+    border-bottom: 3px solid #e68872;
+    font-weight: 700;
+    width: 170px;
+}
+
+#highlight span{
+    background: #d2d5da;
+    width: 35px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+/* Mainbottom and children divs CSS */
+
+.mainbottom{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+}
+
+
+/* Mainright CSS*/
+.mainconright{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mainconright-top{
+    border-bottom: 1px solid #c8c9ca;
+    height: 50px;
+    width: 90%;
+}
+
+.findarep{
+    width: 90%;
+}
+
+/* Results CSS under Mainbottom div */
+.results{
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.results p{
+   border-bottom: 1px solid #c8c9ca;
+   padding-top: 15px;
+   padding-bottom: 15px;
+} 
+
+/* Repo CSS and its children div CSS */
+.repo{
+    width: 90%;
+    border-bottom: 1px solid #c8c9ca;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin: 20px 0 20px 0;
+}
+
+.repotop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.repotop-right button{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #c8c9ca;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.repotop-right button img{
+    width: 16px;
+    margin-right: 5px;
+}
+
+.repotop-left p{
+    margin-top: 5px;
+}
+
+.repotop-left h2{
+    color: #3065cf;
+}
+
+.repobottom{
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    justify-content: space-between;
+    width: 400px;
+    margin-top: 15px;
+}
+
+.langauge{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#langaugeColor{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.starred{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.starred img{
+    width: 15px;
+    margin-right: 3px;
+}
+
+.forks{
+    display: flex;
+    flex-direction: row;
+}
+
+.forks img{
+    width: 11px;
+    margin-right: 3px;
+}
+
+.bio{
+    margin-top: 7px;
+}
+
+.userLogin{
+    color: #596068;
+}
+
+@media only screen and (max-width: 1200px){
+    .nav2{
+        display: flex;
+    }
+    .toggle-links{
+        display: none;
+        width: 100%;
+    }
+    .toggle-links ul{
+        width: 100%;
+    }
+    .toggle-links.active{
+        display: flex;
+    }
+    .nav1{
+        display: none;
+    }
+
+    .maintop{
+        display: flex;
+        flex-direction: column;
+    }
+    .conleft-top{
+        text-align: center;
+        width: 100%;
+        top: 0px;
+        text-align: center;
+        position: relative;
+    }
+
+    .conleft-topinner{
+        display: flex;
+        flex-direction: row;
+        width: 250px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        text-align: left;
+        width: 80%;
+    }
+
+    .conright-top{
+        margin-left: 0;
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .conright-top button{
+        margin-top: 0px;
+    }
+    
+
+    .intro{
+        padding-left: 15px;
+    }
+
+
+    .innerimg1{
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .mainbottom{
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mainconright-top{
+        border-bottom: 1px solid #c8c9ca;
+        height: 50px;
+        width: 100%;
+    }
+    .results{
+        width: 100%;
+    }
+
+    .repo{
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+    .conright-top{
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+    
+    .conright-top::-webkit-scrollbar{
+        height: 4px;
+    }
+    
+    .conright-top::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.7);
+        -webkit-border-radius: 10px;
+    }
+    .conright-top::-webkit-scrollbar-thumb{
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.5);
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .repotop-left h2{
+        font-size: 18px;
+    }
+    .repotop-left p{
+        font-size: 12px;
+    }
+    .repotop-right button{
+        width: 70px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .repotop-right button img{
+        width: 12px;
+    }
+    .repobottom{
+        width: 100%;
+    }
+
+    .conright-top button{
+        font-size: 11px;
+    }
+    button img{
+        margin-right: 3px;
+    }
+    
+}
+
