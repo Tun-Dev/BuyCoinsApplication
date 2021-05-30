@@ -1,57 +1,22 @@
-
-// function getUserName(){
-//     var userNameLogin = document.getElementById('userName').value;
-//     localStorage.setItem("userCall", userNameLogin);
-//     if(userNameLogin === ""){
-//         window.alert('Enter a Github Username')
-//     } 
-
-//     const TOKEN = process.env.API_KEY
- 
-
-//     fetch("https://api.github.com/graphql",{
-//         method: "POST",
-//         body: JSON.stringify({
-//             query: `{
-//                 user(login: "${userNameLogin}"){
-//                 login
-//                 id
-//                 name
-//                 bio
-//             }
-//         }`
-//         }),
-//         headers:{
-//             'Content-type': 'application/json',
-//             'Authorization': `Bearer ${TOKEN}`      
-//         }
-//     })
-//         .then(res => res.json())
-//         .then(data => {
-//             let user = data.data.user
-//             if (data.data.user == null ){
-//                 window.alert('User does not exist')
-//             } else{
-//                 window.location.href="userprofile.html"
-//             }
-//         })
-    
-// }
-
 function getUserName(){
 var userNameLogin = document.getElementById('userName').value;
 localStorage.setItem("userCall", userNameLogin);
+
 if(userNameLogin === ""){
     window.alert('Enter a Github Username')
 } 
 
+const apiLink = "/.netlify/functions/verifyUser"
+
 const getUserData = async() => {
+    const api = await fetch(apiLink)
+    const API_KEY = await api.text();
     try{
         const user = await fetch("https://api.github.com/graphql", {
             method: 'POST',
             headers:{
             'Content-type': 'application/json',
-            'Authorization': `Bearer ${TOKEN}`      
+            'Authorization': `Bearer ${API_KEY}`      
             },
             body: JSON.stringify({
                 query: `{
@@ -66,14 +31,12 @@ const getUserData = async() => {
 
         })
         const result = await user.json()
-        // const profile = result.data.user;
         let userCheck = result.data.user
-        if (result.data.user == null ){
+        if (userCheck === null ){
             window.alert('User does not exist')
         } else{
             window.location.href="userprofile.html"
         }
-        // console.log(result.data);
     }
 
     catch(err){
@@ -82,8 +45,10 @@ const getUserData = async() => {
 } 
 
 getUserData();
-
 }
+
+
+
 
 
 
