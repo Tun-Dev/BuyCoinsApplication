@@ -9,14 +9,19 @@ navbarLinks.classList.toggle('active')
 var userNameLogin = localStorage.getItem("userCall")
 
 
+//Fetching Token link
+const apiLink = "/.netlify/functions/verifyUser"
+
 
 const getUserData = async() => {
+    const api = await fetch(apiLink)
+    const API_KEY = await api.text();
     try{
         const user = await fetch("https://api.github.com/graphql", {
             method: 'POST',
             headers:{
             'Content-type': 'application/json',
-            'Authorization': `Bearer ${TOKEN}`      
+            'Authorization': `Bearer ${API_KEY}`      
             },
             body: JSON.stringify({
                 query: `{
@@ -155,15 +160,15 @@ const getUserData = async() => {
 
 getUserData();
 
-document.getElementById("totalRepoCount").innerHTML = output2
-//     })
 const getUserRepoCount = async() => {
+    const api = await fetch(apiLink)
+    const API_KEY = await api.text();
     try{
         const user = await fetch("https://api.github.com/graphql", {
             method: 'POST',
             headers:{
             'Content-type': 'application/json',
-            'Authorization': `Bearer ${TOKEN}`      
+            'Authorization': `Bearer ${API_KEY}`      
             },
             body: JSON.stringify({
                 query: `{
