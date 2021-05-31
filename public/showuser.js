@@ -32,7 +32,7 @@ const getUserData = async() => {
                     bio
                     avatarUrl
                     url
-                    repositories(first: 20 ) {
+                    repositories(last: 20 ) {
                         nodes {
                             id
                             name
@@ -44,17 +44,9 @@ const getUserData = async() => {
                             stargazers {
                                 totalCount
                             }
-                            licenseInfo {
-                                id
-                            }
                             primaryLanguage {
                                 name
                                 color
-                            }
-                            languages(first: 10) {
-                                nodes {
-                                    name
-                                }
                             }
                         }
                     }
