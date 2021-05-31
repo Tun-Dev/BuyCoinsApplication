@@ -344,7 +344,7 @@ button img{
 .starred{
     display: flex;
     flex-direction: row;
-
+    align-items: center;
 }
 
 .starred img{
