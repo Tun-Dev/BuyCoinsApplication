@@ -38,7 +38,9 @@ const getUserData = async() => {
                             url
                             updatedAt
                             forkCount
-                            stargazerCount
+                            stargazers{
+                                totalCount
+                            }
                             primaryLanguage {
                                 name
                                 color
@@ -85,7 +87,7 @@ const getUserData = async() => {
             let primaryLanguage = result.data.user.repositories.nodes[i].primaryLanguage.name;
             let languageColor = result.data.user.repositories.nodes[i].primaryLanguage.color;
             let forks = result.data.user.repositories.nodes[i].forkCount;
-            let stargazer = result.data.user.repositories.nodes[i].stargazerCount;
+            let stargazer = result.data.user.repositories.nodes[i].stargazers.totalCount;
             let lastUpdates = result.data.user.repositories.nodes[i].updatedAt;
     
             // For empty Description query results
