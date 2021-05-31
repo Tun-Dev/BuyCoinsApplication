@@ -31,7 +31,7 @@ const getUserData = async() => {
                     bio
                     avatarUrl
                     url
-                    repositories(first: 20) {
+                    repositories(last: 20) {
                         nodes {
                             name
                             description
