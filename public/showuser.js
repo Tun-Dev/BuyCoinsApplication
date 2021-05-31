@@ -132,7 +132,7 @@ const getUserData = async() => {
             </div>
             `
             // For Loop to render each repo div
-            for(j=0; j<result.data.user.repositories.nodes.length; j++){
+            for(j=0; j<1; j++){
                 var div = document.createElement('div');
                 div.innerHTML = repo
 
