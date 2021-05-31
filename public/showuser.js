@@ -99,6 +99,10 @@ const getUserData = async() => {
                 primaryLanguage = " "
             }
 
+            if(languageColor == null){
+                languageColor= " "
+            }
+
             // Changing the format of time from the query to Date format
             var time = new Date(lastUpdates)
             var Updated = time.toDateString()
