@@ -97,6 +97,7 @@ const getUserData = async() => {
             if(primaryLanguage == null){
                 language = " "
                 languageColor = " "
+                display = "none"
             }else{
                 language = primaryLanguage.name
                 languageColor = primaryLanguage.color
@@ -118,7 +119,7 @@ const getUserData = async() => {
                     </div>
                 </div>
                 <div class="repobottom">
-                    <div class="langauge" >
+                    <div class="langauge" style="display: ${display}" >
                         <div id="langaugeColor" style="background-color: ${languageColor}"></div>
                         <p>${language}</p>
                     </div>
