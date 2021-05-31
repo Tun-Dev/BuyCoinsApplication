@@ -104,6 +104,18 @@ const getUserData = async() => {
                 display = " "
             }
 
+            if(forks == 0){
+                displayFork = "none"
+            }else{
+                displayFork = " "
+            }
+
+            if(stargazer == 0){
+                displayStargazer = "none"
+            }else{
+                displayStargazer = " "
+            }
+
             // Changing the format of time from the query to Date format
             var time = new Date(lastUpdates)
             var Updated = time.toDateString()
@@ -124,11 +136,11 @@ const getUserData = async() => {
                         <div id="langaugeColor" style="background-color: ${languageColor}"></div>
                         <p>${language}</p>
                     </div>
-                    <div class="starred" >
+                    <div class="starred" style="display: ${displayStargazer}"  >
                         <img src="images/star.png" alt="">
                         <p>${stargazer}</p>
                     </div>
-                    <div class="forks" >
+                    <div class="forks" style="display: ${displayFork}"  >
                         <img src="images/code-branch-solid.svg" alt="">
                         <p>${forks}</p>
                     </div>
