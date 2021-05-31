@@ -323,7 +323,7 @@ button img{
     display: flex;
     flex-direction: row;
     font-size: 11px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 400px;
     margin-top: 15px;
 }
