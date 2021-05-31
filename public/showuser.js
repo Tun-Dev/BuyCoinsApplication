@@ -84,8 +84,7 @@ const getUserData = async() => {
         for(i=0; i<=result.data.user.repositories.nodes.length; i++){
             let nameRepo = result.data.user.repositories.nodes[i].name;
             let descRepo = result.data.user.repositories.nodes[i].description;
-            let primaryLanguage = result.data.user.repositories.nodes[i].primaryLanguage.name;
-            let languageColor = result.data.user.repositories.nodes[i].primaryLanguage.color;
+            let primaryLanguage = result.data.user.repositories.nodes[i].primaryLanguage;
             let forks = result.data.user.repositories.nodes[i].forkCount;
             let stargazer = result.data.user.repositories.nodes[i].stargazers.totalCount;
             let lastUpdates = result.data.user.repositories.nodes[i].updatedAt;
@@ -96,11 +95,11 @@ const getUserData = async() => {
             }
 
             if(primaryLanguage == null){
-                primaryLanguage = " "
-            }
-
-            if(languageColor == null){
-                languageColor= " "
+                let language = " "
+                let languageColor = " "
+            }else{
+                language = primaryLanguage.name
+                languageColor = primaryLanguage.color
             }
 
             // Changing the format of time from the query to Date format
@@ -121,7 +120,7 @@ const getUserData = async() => {
                 <div class="repobottom">
                     <div class="langauge" >
                         <div id="langaugeColor" style="background-color: ${languageColor}"></div>
-                        <p>${primaryLanguage}</p>
+                        <p>${language}</p>
                     </div>
                     <div class="starred" >
                         <img src="images/star.png" alt="">
