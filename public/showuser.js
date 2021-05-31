@@ -95,11 +95,11 @@ const getUserData = async() => {
             }
 
             if(primaryLanguage == null){
-                let language = " "
-                let languageColor = " "
+                language = " "
+                languageColor = " "
             }else{
-                language = primaryLanguage.name
-                languageColor = primaryLanguage.color
+                language = primaryLanguage[i].name
+                languageColor = primaryLanguage[i].color
             }
 
             // Changing the format of time from the query to Date format
