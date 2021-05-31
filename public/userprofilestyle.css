@@ -324,7 +324,7 @@ button img{
     flex-direction: row;
     font-size: 11px;
     justify-content: space-between;
-    /* width: 400px; */
+    width: 300px;
     margin-top: 15px;
 }
 
