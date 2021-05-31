@@ -101,6 +101,7 @@ const getUserData = async() => {
             }else{
                 language = primaryLanguage.name
                 languageColor = primaryLanguage.color
+                display = " "
             }
 
             // Changing the format of time from the query to Date format
