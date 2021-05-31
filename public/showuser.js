@@ -31,7 +31,7 @@ const getUserData = async() => {
                     bio
                     avatarUrl
                     url
-                    repositories(last: 20) {
+                    repositories(first: 20) {
                         nodes {
                             name
                             description
@@ -79,7 +79,7 @@ const getUserData = async() => {
         document.getElementById("intro").innerHTML = intro
 
         // REPOSITORY CALL
-        for(i=0; i<=result.data.user.repositories.nodes.length; i++){
+        for(i=0; i<result.data.user.repositories.nodes.length; i++){
             let nameRepo = result.data.user.repositories.nodes[i].name;
             let descRepo = result.data.user.repositories.nodes[i].description;
             let primaryLanguage = result.data.user.repositories.nodes[i].primaryLanguage.name;
