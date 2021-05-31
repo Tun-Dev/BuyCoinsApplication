@@ -27,7 +27,6 @@ const getUserData = async() => {
                 query: `{
                     user(login: "${userNameLogin}"){
                     login
-                    id
                     name
                     bio
                     avatarUrl
@@ -40,7 +39,6 @@ const getUserData = async() => {
                             url
                             updatedAt
                             forkCount
-                            openGraphImageUrl
                             stargazers {
                                 totalCount
                             }
