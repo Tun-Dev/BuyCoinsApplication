@@ -373,7 +373,7 @@ button img{
     color: #596068;
 }
 
-@media only screen and (max-width: 1200px){
+/* @media only screen and (max-width: 1200px){
     .nav2{
         display: flex;
     }
@@ -458,9 +458,91 @@ button img{
     }
 
 
-}
+} */
 
 @media only screen and (max-width: 600px){
+        .nav2{
+        display: flex;
+    }
+    .toggle-links{
+        display: none;
+        width: 100%;
+    }
+    .toggle-links ul{
+        width: 100%;
+    }
+    .toggle-links.active{
+        display: flex;
+    }
+    .nav1{
+        display: none;
+    }
+
+    .maintop{
+        display: flex;
+        flex-direction: column;
+    }
+    .conleft-top{
+        text-align: center;
+        width: 100%;
+        top: 0px;
+        text-align: center;
+        position: relative;
+    }
+
+    .conleft-topinner{
+        display: flex;
+        flex-direction: row;
+        width: 250px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        text-align: left;
+        width: 80%;
+    }
+
+    .conright-top{
+        margin-left: 0;
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .conright-top button{
+        margin-top: 0px;
+    }
+    
+
+    .intro{
+        padding-left: 15px;
+    }
+
+
+    .innerimg1{
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .mainbottom{
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mainconright-top{
+        border-bottom: 1px solid #c8c9ca;
+        height: 50px;
+        width: 100%;
+    }
+    .results{
+        width: 100%;
+    }
+
+    .repo{
+        width: 100%;
+    }
     .conright-top{
         overflow: scroll;
         overflow-y: hidden;
